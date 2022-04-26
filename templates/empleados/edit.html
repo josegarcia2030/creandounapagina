@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Pagina de Editar</title>
+</head>
+<body>
+    <h1>Pagina para Editar los datos del Empleado</h1>
+    
+    <form method="post" action="" enctype="multipart/form-data">
+        {% for empleado in employes %}
+        <label for="lblId">ID</label>
+        <input type="text" name="txtID" id="txtID" value="{{empleado[0]}}">
+        <label for="lblNombre">Nombre</label>
+        <input type="text" name="txtNombre" id="txtNombre" value="{{empleado[1]}}">
+        <label for="lblCorreo">Correo</label>
+        <input type="email" name="txtCorreo" id="txtCorreo" value="{{empleado[2]}}">
+        <label for="lblFoto">Fotografia</label>
+        <input type="file" name="txtFoto" id="txtFoto" value="{{empleado[3]}}">
+        <input type="submit" value="Guardar Cambios">
+        {% endfor %}
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Agregar Empleado</title>
+</head>
+<body>
+    <h1>Pagina para agregar empleado</h1>
+    <form method="post" action="/store" enctype="multipart/form-data">
+        <label for="lblNombre">Nombre</label>
+        <input type="text" name="txtNombre" id="txtNombre">
+        <label for="lblCorreo">Correo</label>
+        <input type="email" name="txtCorreo" id="txtCorreo">
+        <label for="lblFoto">Fotografia</label>
+        <input type="file" name="txtFoto" id="txtFoto">
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>

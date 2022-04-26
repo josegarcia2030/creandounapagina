@@ -8,5 +8,30 @@
 </head>
 <body>
     <h1>Bienvenido a la Pagina Principal</h1>
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Foto</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleado in employes %}
+            <tr>
+                <td>{{ empleado[0]}}</td>
+                <td>{{ empleado[1]}}</td>
+                <td>{{ empleado[2]}}</td>
+                <td>{{ empleado[3]}}</td>
+                <td>
+                    <a href="/editar/{{empleado[0]}}" class="btn btn-primary" type="button">Editar</a> 
+                    <a href="/destroy/{{empleado[0]}}" class="btn btn-danger" type="button">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
